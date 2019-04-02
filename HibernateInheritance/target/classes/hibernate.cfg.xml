@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+<session-factory>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property> 
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property> 
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+  <property name="hibernate.connection.username">root</property> 
+  <property name="hibernate.connection.password">root</property> 
+   <property name="connection_pool_size">20</property>
+  <property name="current_session_context_class">thread</property>
+  <property name="hibernate.hbm2ddl.auto">create-drop</property> 
+  <property name="show_sql">true</property>
+  <property name="format_sql">true</property>
+  
+   <!--  <mapping class="com.scp.java.HibernateInheritance.Parent" /> 
+  <mapping class="com.scp.java.HibernateInheritance.Child" />  -->
+  
+  
+     <mapping class="com.scp.java.tableperclass.Parent" /> 
+  <mapping class="com.scp.java.tableperclass.Child" /> 
+  
+  <!--  <mapping class="com.scp.java.joined.Parent" /> 
+  <mapping class="com.scp.java.joined.Child" />  -->
+  
+  
+  </session-factory>
+  </hibernate-configuration>
